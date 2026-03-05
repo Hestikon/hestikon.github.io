@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noarchive, nosnippet">
+    <meta name="robots" content="noai, noimageai">
+    <meta name="ai-content" content="not-for-ai">
+    <title>Zerno Aesthetic - Grain Effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="about-trigger" id="aboutBtn">about</div>
+
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-tabs">
+                    <button class="tab-btn active" onclick="openTab(event, 'story')">Story</button>
+                    <button class="tab-btn" onclick="openTab(event, 'specs')">Tech Specs</button>
+                    <button class="tab-btn" onclick="openTab(event, 'privacy')">Privacy</button>
+                </div>
+                <button id="closeModalCross" class="close-btn">✕</button>
+            </div>
+
+            <div class="modal-body tab-content active" id="story">
+                <h2>Zerno Aesthetic</h2>
+                <p><b>Zerno</b> — (from Russian <i>Зерно</i>, meaning <i>Grain</i>).</p>
+                <p>I've always loved film grain. There's something warm and alive about it that digital photos often lack. Most tools that do this are either bloated, overly complex, or just don't nail the feel I'm after.</p>
+                <p>So I built my own.</p>
+                <p>Part of the Visual Dep. of <a href="hestikon.github.io">SAM</a>.</p>
+                <div class="modal-footer"><a href="https://github.com/Hestikon" target="_blank" rel="noopener noreferrer" class="footer-link">Hestikon</a> — 2026</div>
+            </div>
+
+            <div class="modal-body tab-content" id="specs">
+                <h2>Technical Passport</h2>
+                <p>Honestly, this started as a pure vanity project. Then I stumbled on <a href="https://doodad.dev/dither-me-this/" target="_blank">Dither Me This</a> and realized the same grain effect could actually make images lighter for the web. So it became useful by accident.</p>
+
+                <p><b>Visual Philosophy:</b> An homage to the <a href="https://en.wikipedia.org/wiki/Technical_Aesthetics" target="_blank">"Technical Aesthetics"</a> journal - a Soviet design publication that believed beauty and function are the same thing.</p>
+
+                <p><b>Luma-Grain Synthesis:</b> Noise is injected into the luminance channel only, so the grain is monochromatic and doesn't mess with your colors.</p>
+
+                <p><b>Dithering Effect:</b> Dense grain breaks up the flat pixel blocks that JPEG compression loves to mangle. Fewer artifacts, cleaner result.</p>
+
+                <p><b>Smart Optimization:</b> A barely-there softness pass (0.35px) smooths out sensor noise before encoding, so the compressor has an easier job.</p>
+                <p><b>AI Ethics & Curation:</b> The technical heavy lifting was done by AI. I decided what it should do and how it should feel.</b>
+                <div class="modal-footer">System Documentation v1.0</div>
+            </div>
+
+            <div class="modal-body tab-content" id="privacy">
+                <h2>Privacy Protocol</h2>
+                <p><b>Local Processing:</b> Your images never leave your browser. Everything happens in memory - no uploads, no servers, nothing sent anywhere.</p>
+                <p><b>Zero Tracking:</b> No cookies, no analytics, no tracking pixels.</p>
+                <p><b>Offline Capability:</b> Once the page is loaded, it works without internet.</p>
+                <div class="modal-footer">Data Security Standard - Client-Side Only</div>
+            </div>
+        </div>
+    </div>
+
+    <aside class="sidebar">
+        <h1>zerno<br>aesthetic</h1>
+
+        <div class="description">
+            Adds film grain to your photos. Shrinks the file size too.
+        </div>
+
+        <div class="control-group">
+            <input type="file" id="upload" hidden accept="image/*">
+            <button class="btn-tekh" onclick="document.getElementById('upload').click()">+ load object</button>
+        </div>
+
+        <div class="control-group">
+            <label>Grain Intensity (G)</label>
+            <input type="range" id="grain" min="0" max="100" value="30">
+        </div>
+
+        <div class="control-group">
+            <label class="checkbox-label">
+                <input type="checkbox" id="optimizeWeight" checked>
+                <span>Optimize Weight</span>
+            </label>
+        </div>
+
+        <div id="stats" class="stats">status: awaiting file...</div>
+
+        <div class="sidebar-footer">
+            <button class="btn-tekh" id="download" style="background: #fff;">↓ zerno it!</button>
+        </div>
+    </aside>
+
+    <main class="main-view">
+        <div id="canvasWrap" class="canvas-wrap" style="display:none;">
+            <canvas id="canvas"></canvas>
+        </div>
+    </main>
+
+     <a href="/hidden-admin-login" class="bot-trap" aria-hidden="true" tabindex="-1">Admin Space</a>
+    <script src="script.js"></script>
+</body>
+</html>
