@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Сектор не найден</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .error-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .error-plate {
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid var(--amber);
+            padding: 40px;
+            background: rgba(146, 64, 14, 0.03);
+            position: relative;
+            text-align: center;
+        }
+
+        .error-plate::before {
+            content: "ERR_404";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: var(--bg);
+            padding: 0 10px;
+            font-size: 10px;
+            color: var(--amber);
+            font-weight: 800;
+        }
+
+        .error-code {
+            font-size: 64px;
+            font-weight: 800;
+            color: var(--amber);
+            line-height: 1;
+            margin-bottom: 20px;
+            letter-spacing: -4px;
+        }
+
+        .error-message {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: var(--text);
+            line-height: 1.4;
+        }
+
+        .error-sub {
+            font-size: 10px;
+            color: var(--text-dim);
+            margin-top: 15px;
+            border-top: 1px dashed var(--amber);
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="projects-nav">
+        <div class="nav-links">
+            <a href="index.html" class="nav-link"><- на главную</a>
+        </div>
+
+        <div class="status-terminal">
+            <span class="status-text" style="color: #ff4444;">[CRITICAL_ERROR]</span><span class="cursor">_</span>
+        </div>
+    </nav>
+
+    <main class="error-container">
+        <div class="error-plate">
+            <div class="error-code">404</div>
+            <div class="error-message">
+                Запрошенный сектор отсутствует в базе данных НИИ
+            </div>
+            <div class="error-sub">
+                Или еще не был оптимизирован под нашу реальность.
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-line">
+            <span>SRI of Applied Mischief / System Log</span>
+            <span>Unidentified Request // 2026</span>
+        </div>
+    </footer>
+
+</body>
+</html>
