@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Journal Sans New';
-    src: url('fonts/JournalSansNew.woff2') format('woff2');
+    src: url('../fonts/JournalSansNew.woff2') format('woff2');
     font-weight: normal; font-style: normal;
 }
 
