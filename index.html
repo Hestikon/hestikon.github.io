@@ -3,40 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noarchive, nosnippet, noai, noimageai">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-<!--Что ты надеешься здесь найти? -->
-    <title>НИИ — ПО</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Afandibek_bot — SAM</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Специфичные стили для текстовой страницы */
+        .content-reader {
+            max-width: 650px;
+            margin-top: 40px;
+            padding-bottom: 100px; /* Запас снизу для прокрутки */
+        }
+
+        .content-reader h1 {
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            color: var(--text);
+        }
+
+        .content-reader p {
+            margin-bottom: 20px;
+            font-size: 15px;
+            color: var(--text-dim);
+            line-height: 1.8;
+        }
+
+        /* Название страницы рядом с кнопкой назад */
+        .nav-current-page {
+            color: var(--text);
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 15px;
+            margin-left: 10px;
+        }
+
+        /* Декоративный разделитель */
+        .nav-separator {
+            color: var(--amber);
+            opacity: 0.5;
+        }
+    </style>
 </head>
-<body>
+<body class="inner-page">
 
     <nav class="projects-nav">
-      <div class="nav-links">
-        <a href="afandibek/index.html" class="nav-link">// afandibek</a>
-        <a href="visualdep/index.html" class="nav-link">// visual dep.</a>
-
-      </div>
+        <div class="nav-links">
+            <a href="../index.html" class="nav-link"><- назад</a>
+            <span class="nav-separator">/</span>
+            <span class="nav-current-page">// Afandibek Bot</span>
+        </div>
 
         <div class="status-terminal">
-        <span class="status-text"></span><span class="cursor">_</span>
-    </div>
+            <span class="status-text"></span><span class="cursor">_</span>
+        </div>
     </nav>
 
-    <header class="header">
-        <div class="logo">НИИ <span>при</span>кладного озорства</div>
-        <div class="tagline">Scientific Research Institute of Applied Mischief. 2026 v1.0</div>
-    </header>
+    <main class="content-reader">
+        <h1>Афандибек - бот, чтобы собрать друзей в Телеграм</h1>
+        <p>Этот бот был сделан "по приколу" и должен <strong>служить только душевным и дружеским целям.</strong><br>
+        Основная цель и единственная задача бота - быстро, удобно и с частичкой мудрости Ходжи Насреддина собрать вместе друзей и родных. Вы можете создать мероприятие, пригласить людей из ваших контактов в телеграм, вести учет кто пойдет, а кто нет.<br>
+        Если же кто-то сомневается, Афанди будет иронизировать и напомнит этому человеку еще раз. Когда все ответы учтены, вы закрываете сбор и можете выставить счет, который будет автоматически поделен между участниками.</p>
 
-    <main class="intro">
-        <p>У меня нет глубоких познаний в ИТ и необходимых навыков программирования. Просто у меня много идей.</p>
-        <p>Это скромная коллекция моих цифровых поделок. Они небольшие и простые, и делать их весело.</p>
+        <p><strong>Важное примечание #1:</strong> Рекомендуется использовать в группах в Телеграм. Это то, для чего бот был задуман.</p>
+        <p><strong>Важное примечание #2:</strong> Создатель бота не несет ответственности за то, как используется бот. Также, следует помнить, что этот проект только хобби и держится на энтузиазме.</p>
+        <p>Используя бот вы соглашаетесь на <a href="https://telegra.ph/Usloviya-ispolzovaniyaFoydalanish-shartlari---Afandibek-bot-03-05-2" target="_blank" rel="noopener noreferrer" class="footer-link">Условия Использования.</a></p>
+        <p>Здесь вы можете посмотреть <a href="https://telegra.ph/Politika-konfidencialnostiMaxfiylik-siyosati-03-03" target="_blank" rel="noopener noreferrer" class="footer-link">Политику конфиденциальности.</a></p>
+        <p>Если вам (вдруг, почему-то) стало интересно, как работает и сделан этот бот, вам <a href="https://telegra.ph/Tehnicheskij-vopros-03-05" target="_blank" rel="noopener noreferrer" class="footer-link">сюда.</a></p>
     </main>
 
     <footer class="page-footer">
         <div class="footer-line">
-            <span>SRI of AM — Mischief managed by <a href="https://github.com/Hestikon" target="_blank" rel="noopener noreferrer" class="footer-link">Hestikon</a></span>
-            <span>Inventory Logs: 2026.03.05</span>
+            <span>SRI of AM — by <a href="https://github.com/Hestikon" target="_blank" rel="noopener noreferrer" class="footer-link">Hestikon</a></span>
+            <span>Ref: afandibekbot_2026</span>
         </div>
     </footer>
 
