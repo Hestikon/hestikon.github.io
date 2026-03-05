@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noarchive, nosnippet, noai, noimageai">
+    <meta name="ai-content" content="not-for-ai">
+    <title>Diafilm - Soviet Film Emulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="about-trigger" id="aboutBtn">about</div>
+
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-tabs">
+                    <button class="tab-btn active" onclick="openTab(event, 'story')">Story</button>
+                    <button class="tab-btn" onclick="openTab(event, 'specs')">Tech Specs</button>
+                    <button class="tab-btn" onclick="openTab(event, 'privacy')">Privacy</button>
+                </div>
+                <button id="closeModalCross" class="close-btn">✕</button>
+            </div>
+
+            <div class="modal-body tab-content active" id="story">
+                <h2>Diafilm</h2>
+                <p><b>Diafilm</b> — (from Russian <i>Диафильм</i>, meaning <i>Film Strip</i>).</p>
+                <p>I was too young to catch that era. But once, at my grandmother's, we found an old diafilm projector. We tried to make it work but its time had clearly passed.</p>
+                <p>This tool is my way of finishing that afternoon.</p>
+                <p>Part of the Visual Dep. of <a href="hestikon.github.io">SAM</a>.</p>
+                <div class="modal-footer"><a href="https://github.com/Hestikon" target="_blank" rel="noopener noreferrer" class="footer-link">Hestikon</a> — 2026</div>
+            </div>
+
+            <div class="modal-body tab-content" id="specs">
+                <h2>Technical Passport</h2>
+                <p><b>Grain:</b> Fixed monochromatic noise - always present, not configurable. Soviet film stock wasn't smooth. Neither is this.</p>
+                <p><b>Warm Tone:</b> Shifts colour temperature toward amber. Mimics the chemical drift of ageing emulsion.</p>
+                <p><b>Scratches & Dust:</b> Procedural vertical scratches and dust particles. Generated fresh each time.</p>
+                <p><b>Vignette:</b> Soft darkening at the edges, light pooling in the centre.</p>
+                <p><b>Frame & Perforations:</b> The characteristic diafilm border with sprocket holes. Fixed. Always there.</p>
+                <p><b>Caption:</b> Text rendered at the bottom of the frame, in the diafilm tradition.</p>
+                <p><b>Smart Optimization:</b> Same weight reduction as Zerno. The past doesn't have to be heavy.</p>
+                <p><b>AI Ethics & Curation:</b> The technical heavy lifting was done by AI. I decided what it should do and how it should feel.</b>
+                <div class="modal-footer">System Documentation v1.0</div>
+            </div>
+
+            <div class="modal-body tab-content" id="privacy">
+                <h2>Privacy Protocol</h2>
+                <p><b>Local Processing:</b> Your images never leave your browser. Everything happens in memory — no uploads, no servers, nothing sent anywhere.</p>
+                <p><b>Zero Tracking:</b> No cookies, no analytics, no tracking pixels.</p>
+                <p><b>Offline:</b> Once the page is loaded, it works without internet.</p>
+                <div class="modal-footer">Data Security Standard — Client-Side Only</div>
+            </div>
+        </div>
+    </div>
+
+    <aside class="sidebar">
+        <h1>diafilm</h1>
+
+        <div class="description">
+            Turns your photos into Soviet film strips. Scratches included.
+        </div>
+
+        <div class="control-group">
+            <input type="file" id="upload" hidden accept="image/*">
+            <button class="btn-tekh" onclick="document.getElementById('upload').click()">+ load frame</button>
+        </div>
+
+        <hr class="section-divider">
+
+        <div class="control-group">
+            <label>Warm Tone</label>
+            <input type="range" id="warmth" min="0" max="100" value="50">
+        </div>
+
+        <div class="control-group">
+            <label>Scratches & Dust</label>
+            <input type="range" id="scratches" min="0" max="100" value="40">
+        </div>
+
+        <div class="control-group">
+            <label>Vignette</label>
+            <input type="range" id="vignette" min="0" max="100" value="55">
+        </div>
+
+        <hr class="section-divider">
+
+        <div class="control-group">
+            <label class="checkbox-label">
+                <input type="checkbox" id="showFrame" checked>
+                <span>Film Frame & Perforations</span>
+            </label>
+        </div>
+
+        <div class="control-group">
+            <label class="checkbox-label">
+                <input type="checkbox" id="optimizeWeight" checked>
+                <span>Optimize Weight</span>
+            </label>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- Caption -->
+        <div class="control-group">
+            <div class="caption-bar">Caption text</div>
+            <textarea
+                class="caption-input"
+                id="captionText"
+                rows="2"
+                placeholder="type your caption here..."></textarea>
+        </div>
+
+        <div id="stats" class="stats">status: awaiting frame...</div>
+
+        <div class="sidebar-footer">
+            <button class="btn-tekh" id="download">↓ diafilm it!</button>
+        </div>
+    </aside>
+
+    <main class="main-view">
+        <div id="canvasWrap" class="canvas-wrap" style="display:none;">
+            <canvas id="canvas"></canvas>
+        </div>
+    </main>
+
+    <a href="/hidden-admin-login" class="bot-trap" aria-hidden="true" tabindex="-1">Admin Space</a>
+
+    <script src="script.js"></script>
+</body>
+</html>
