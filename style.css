@@ -37,14 +37,6 @@ body {
     line-height: 1.7;
 }
 
-.projects-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin-bottom: var(--m-nav-bottom);
-    width: 100%;
-}
-
 .nav-link {
     text-decoration: none;
     color: var(--amber);
@@ -62,7 +54,7 @@ body {
 /* Контейнер навигации */
 .projects-nav {
     display: flex;
-    justify-content: space-between; /* Ссылки слева, статус справа */
+    justify-content: space-between; 
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
@@ -205,3 +197,4 @@ body {
         gap: 8px;
     }
 }
+
