@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noarchive, nosnippet, noai, noimageai">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <title>Visual Dep. — НИИ ПО</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* Специфичные настройки для страницы-контейнера */
+        .projects-nav {
+            margin-bottom: 60px;
+        }
+
+        /* Сетка плиток, кратная 20px */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 160px);
+            gap: 20px;
+            padding-bottom: 60px;
+        }
+
+        .tile-button {
+            width: 160px;
+            height: 160px;
+            border: 1px solid var(--text-dim);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 15px;
+            background: rgba(0,0,0,0.01);
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        /* Верхняя строка: Индекс и символ */
+        .tile-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--amber);
+            letter-spacing: 1px;
+        }
+
+        /* Центр: Название проекта */
+        .tile-title {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--text);
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        /* Футер плитки: Метаданные */
+        .tile-meta {
+            font-size: 9px;
+            line-height: 1.3;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            border-top: 1px solid rgba(146, 64, 14, 0.15);
+            padding-top: 10px;
+        }
+
+        /* Ховер-эффект в стиле терминала */
+        .tile-button:hover {
+            border-color: var(--amber);
+            background: rgba(146, 64, 14, 0.04);
+            transform: translateY(-2px);
+            box-shadow: 4px 4px 0px var(--amber);
+        }
+
+        .tile-button:hover .tile-title {
+            color: var(--amber-glow);
+        }
+
+        /* Акцентная подсветка активного раздела в меню */
+        .nav-link.active {
+            color: var(--text);
+            border-bottom: 2px solid var(--amber);
+        }
+
+        @media (max-width: 400px) {
+            .content-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            .tile-button {
+                width: 100%;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body class="inner-page">
+
+    <nav class="projects-nav">
+        <div class="nav-links">
+            <a href="../index.html" class="nav-link"><- назад</a>
+        </div>
+
+        <div class="status-terminal">
+            <span class="status-text"></span><span class="cursor">_</span>
+        </div>
+    </nav>
+
+    <main class="content-grid">
+
+        <a href="zerno/index.html" class="tile-button">
+            <div class="tile-header">
+                <span>ID: 001</span>
+                <span>⬢</span>
+            </div>
+            <div class="tile-title">Zerno<br>Aesthetic</div>
+            <div class="tile-meta">
+                Накладывает простой эффект зерна
+            </div>
+        </a>
+
+        <a href="diafilm/index.html" class="tile-button">
+            <div class="tile-header">
+                <span>ID: 002</span>
+                <span>⚙</span>
+            </div>
+            <div class="tile-title">Диафильм!</div>
+            <div class="tile-meta">
+                Придает изображениям эффект диафильма.
+            </div>
+        </a>
+
+        <a href="../404.html" class="tile-button">
+            <div class="tile-header">
+                <span>ID: 003</span>
+                <span>◈</span>
+            </div>
+            <div class="tile-title">Здесь пока<br>пусто</div>
+            <div class="tile-meta">
+
+            </div>
+        </a>
+
+        </main>
+
+    <footer class="page-footer">
+        <div class="footer-line">
+            <span>SRI of Applied Mischief / Visual Dep.</span>
+            <span>2026.03.05 // AUTH: HESTIKON</span>
+        </div>
+    </footer>
+
+</body>
+</html>
