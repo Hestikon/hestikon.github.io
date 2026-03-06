@@ -130,7 +130,7 @@ body {
 
     /* Линия теперь справа */
     border-right: 2px solid var(--amber);
-    border-left: none; /* Убираем старую линию слева */
+    border-left: none; 
     padding-right: 10px;
     padding-left: 0;
 }
@@ -181,6 +181,40 @@ body {
     color: var(--text-dim);
 }
 
+/* Контейнер для позиционирования над линией */
+.counter-container {
+    display: flex;
+    justify-content: flex-end; 
+    margin-bottom: 5px;
+}
+
+/* Сам блок счетчика и подписи */
+.counter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.counter-box:hover {
+    opacity: 1;
+}
+
+/* Стили для ссылки-подписи */
+.counter-label {
+    font-size: 8px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text-dim);
+    margin-top: 2px;
+}
+
+.counter-img img {
+    display: block;
+    filter: sepia(0.5) hue-rotate(10deg);
+}
+
 .footer-link {
     color: var(--amber);
     text-decoration: none;
@@ -197,4 +231,5 @@ body {
         gap: 8px;
     }
 }
+
 
